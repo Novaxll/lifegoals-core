@@ -7,6 +7,6 @@ RUN npm run build --configuration=production
 
 FROM nginx:alpine
 COPY --from=build /app/dist /tmp/dist
-RUN find /tmp/dist -name "index.html" -exec dirname {} \; | xargs -I {} cp -r {}/* /usr/share/nginx/html/
+RUN APP_DIR=$(find /tmp/dist -type f -name "index.html" -exec dirname {} \; | head -n 1) && cp -r $APP_DIR/* /usr/share/nginx/html/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
