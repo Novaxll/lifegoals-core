@@ -1,0 +1,30 @@
+.glass-dashboard { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+.dash-header { text-align: center; margin-bottom: 50px; }
+.dash-header h1 { font-size: 46px; font-weight: 600; letter-spacing: -1.5px; background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+.dash-header p { font-size: 16px; color: #888; font-weight: 300; }
+.action-section { margin-bottom: 50px; display: flex; justify-content: center; }
+.input-glass { display: flex; align-items: center; width: 100%; max-width: 600px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 12px; border-radius: 20px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); }
+.premium-input { flex: 1; background: transparent; border: none; padding: 12px 16px; color: #fff; font-size: 16px; outline: none; }
+.btn-luxe { display: flex; align-items: center; justify-content: center; background: #fff; color: #000; border: none; width: 44px; height: 44px; border-radius: 14px; cursor: pointer; }
+.goals-stats { font-size: 12px; color: #666; text-transform: uppercase; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.mt-5 { margin-top: 50px; }
+.goals-grid { display: grid; gap: 16px; }
+.goal-card { display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 20px 24px; border-radius: 16px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.goal-info { flex: 1; }
+.goal-info h3 { font-size: 17px; font-weight: 400; color: #eaeaea; margin-bottom: 6px; }
+.goal-info .date { font-size: 12px; color: #777; }
+.goal-actions { display: flex; gap: 8px; align-items: center; }
+.btn-icon { background: transparent; border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; }
+.goal-card:hover .btn-icon, .force-show .btn-icon { opacity: 1; }
+.force-show-hover { opacity: 0; }
+.goal-card:hover .force-show-hover { opacity: 1; }
+.goal-edit { display: flex; gap: 15px; width: 100%; align-items: center; }
+.edit-input { border-bottom: 1px solid #3B82F6; background: rgba(0,0,0,0.2); }
+.completed-card { opacity: 0.5; background: rgba(0,0,0,0.2); border: 1px dashed rgba(255,255,255,0.05); }
+.strikethrough { text-decoration: line-through; color: #666 !important; }
+@media (max-width: 768px) {
+  .glass-dashboard { padding: 0 15px; }
+  .input-glass, .goal-card, .goal-edit { flex-direction: column; }
+  .goal-actions { width: 100%; justify-content: flex-end; margin-top: 10px; }
+  .force-show-hover, .btn-icon { opacity: 1; }
+}

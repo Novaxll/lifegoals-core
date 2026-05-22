@@ -1,0 +1,26 @@
+name: Pipeline Definitivo
+on:
+  push:
+    branches: [ master, main ]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login Docker
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build y Push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USER }}/lifegoals-core:latest
+
+      - name: Trigger Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }} || true
