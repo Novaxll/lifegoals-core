@@ -15,7 +15,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence()
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
