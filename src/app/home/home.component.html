@@ -1,6 +1,6 @@
 <div class="glass-dashboard">
   <header class="dash-header">
-    <h1>Vision Board</h1>
+    <button (click)="showAbout = !showAbout" class="btn-luxe" style="margin-bottom:10px">About</button><h1>Vision Board</h1><app-about *ngIf="showAbout"></app-about>
     <p>Proyecta tu vida, enfoca tus metas y haz que suceda.</p>
   </header>
 

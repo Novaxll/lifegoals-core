@@ -1,0 +1,7 @@
+.about-container { display: flex; justify-content: center; padding: 20px; }
+.credencial-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 20px; width: 350px; backdrop-filter: blur(10px); color: #eaeaea; }
+.header { border-bottom: 1px solid #3B82F6; margin-bottom: 20px; padding-bottom: 10px; }
+.header h2 { font-size: 14px; letter-spacing: 2px; color: #3B82F6; }
+.content p { margin: 10px 0; font-size: 14px; font-family: monospace; }
+.tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 15px; }
+.tags span { background: rgba(59, 130, 246, 0.2); padding: 2px 8px; border-radius: 4px; font-size: 10px; }

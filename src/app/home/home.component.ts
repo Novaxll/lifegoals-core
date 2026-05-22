@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   nuevaMetaTexto: string = '';
   metaEnEdicion: string | null = null;
   textoEdicion: string = '';
+  showAbout: boolean = false;
   private sub!: Subscription;
 
   constructor(private metaService: MetaServiceService) { }
